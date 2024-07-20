@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap');
+        
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            background: url('buwan.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            height: 80%;
+            overflow-y: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-size: 20px;
+            line-height: 2; /* Double spacing */
+            font-style: italic; /* Italic text */
+        }
+        .button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #e55a50;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+        }
+        .audio-player {
+            display: none;
+        }
+    </style>
+    <script>
+        function revealMessage() {
+            document.getElementById('playMessage').style.display = 'none';
+            document.getElementById('hiddenMessage').style.display = 'block';
+            var audio = document.getElementById('song');
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="playMessage">
+            <p>Please play the button below to hear a song and see your message.</p>
+            <button class="button" onclick="revealMessage()">Play Song</button>
+        </div>
+        <div id="hiddenMessage" class="hidden-message">
+            <audio id="song" class="audio-player" controls>
+                <source src="THE RIDLEYS- COLD FEET (LYRICS).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p>Hello mahal, kamusta ka? Sana sa loob ng isang taon ng ating pagsasama ay naiparamdam ko sayo ang pagmamahal na deserve mo. Alam kong madami tayo naging plano para sa araw na ito, kung saan tayo kakain, kung saan tayo pupunta o kaya ano ung susuotin natin. Pero kung tatanungin mo naman ako kung okay lang ba akong hindi natin natupad yon? Syempre okay lang. Para sa akin ay palamuti lamang iyon sa makulay nating pagsasama. Hindi man magarbo ang araw na ito ngayon ay ayos lang, wala na sigurong hihigit pa dun sa alam ko at sigurado akong maayos tayo. Panalo na sa akin ang mga halakhak mo. Regalo na din sa akin ang continous updates mo. Ang palagi mo sa aking pagtatanong kung kamusta ako, kung ano ang iniisip ko.</p>
+            <p>Sa totoo lamang ay wala na akong maisip na idugsong pa sa gusto kong sabihin kasi araw araw naman ata akong nagiging makata ng wala sa oras sayo. Alam kong may mauulit at mauulit na mga salita na marahil ay nabasa at narinig mo na sakin na nababasa mo ulit ngayon. Pero kahit paulit ulit mo ng naririnig at nakikita ito, gusto ko ulit uliting sabihin na mahal na mahal kita. Sagad boss.</p>
+            <p>I love you.</p>
+            <p>Happy Anniversay mahal ko. Habang tinatype ko ung salitang 'Happy Anniversary' ewan ko ba pero naluluha ako. Nagiging emosyonal ako e. Siguro kasi ganun talaga siguro no pag mahal mo, minsan nakakabaliw, minsan nakakapraning, minsan nakakatanga, pero basta sayo feeling ko tama lahat.</p>
+            <p>Happy Anniversary Mahal ko.</p>
+        </div>
+    </div>
+</body>
+</html>
